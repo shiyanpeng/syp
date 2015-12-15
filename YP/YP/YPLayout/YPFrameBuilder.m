@@ -8,119 +8,120 @@
 
 #import "YPFrameBuilder.h"
 
+
+typedef enum {
+    YPFrameBuilderAlignOrientationLeft,
+    YPFrameBuilderAlignOrientationTop,
+    YPFrameBuilderAlignOrientationRight,
+    YPFrameBuilderAlignOrientationBottom,
+    YPFrameBuilderAlignOrientationCenterHorizontally,
+    YPFrameBuilderAlignOrientationCenterVertically,
+}YPFrameBuilderAlignOrientation;
+
 @interface YPFrameBuilder ()
 
-@property (nonatomic, assign) CGFloat x;
-@property (nonatomic, assign) CGFloat y;
-@property (nonatomic, assign) CGFloat w;
-@property (nonatomic, assign) CGFloat h;
+strongProperty UIView *view;
+
+assignProperty CGFloat x;
+assignProperty CGFloat y;
+assignProperty CGFloat w;
+assignProperty CGFloat h;
 
 @end
 
 @implementation YPFrameBuilder
 
 #pragma mark - init
-- (instancetype)init
-{
-    return [self initWithFrame:CGRectZero];
-}
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)initWithView:(UIView *)view
 {
     self = [super init];
     if (self) {
-        [self resetFrame:frame];
+        self.view = view;
     }
     return self;
 }
 
-- (void)resetFrame:(CGRect)frame
+- (YPFrameBuilder *)reset
 {
+    CGRect frame = self.view.frame;
     _x = frame.origin.x;
     _y = frame.origin.y;
     _w = frame.size.width;
     _h = frame.size.height;
-}
-
-#pragma mark - Move
-- (YPFrameBuilder *)moveToX:(CGFloat)x
-{
-    self.x = x;
     return self;
 }
 
-- (YPFrameBuilder *)moveToY:(CGFloat)y
+- (YPFrameBuilder *)apply
 {
-    self.y = y;
+    self.view.frame = CGRectMake(self.x, self.y, self.w, self.h);
     return self;
 }
 
-- (YPFrameBuilder *)moveToOrigin:(CGPoint)origin;
+#pragma mark - set left&right
+
+- (YPFrameBuilder *)setLeft:(CGFloat)left
 {
-    [self moveToOriginWithX:origin.x y:origin.y];
+    return [self setOrigin:CGPointMake(left, self.y)];
+}
+
+- (YPFrameBuilder *)setTop:(CGFloat)top
+{
+    return [self setOrigin:CGPointMake(self.x, top)];
+}
+
+- (YPFrameBuilder *)setRight:(CGFloat)right
+{
+    return [self setOrigin:CGPointMake(self.view.superview.bounds.size.width - right - self.w, self.y)];
+}
+- (YPFrameBuilder *)setBottom:(CGFloat)bottom
+{
+    return [self setOrigin:CGPointMake(self.x, self.view.superview.bounds.size.height - bottom - self.h)];
+}
+
+- (YPFrameBuilder *)setOrigin:(CGPoint)origin
+{
+    self.x = origin.x;
+    self.y = origin.y;
     return self;
 }
 
-- (YPFrameBuilder *)moveToOriginWithX:(CGFloat)x y:(CGFloat)y
+- (YPFrameBuilder *)setOriginEqualToView:(UIView *)view
 {
-    [[self moveToX:x] moveToY:y];
+    [self setOrigin:view.frame.origin];
     return self;
 }
 
-- (YPFrameBuilder *)moveToView:(UIView *)view
+#pragma mark - move
+
+- (YPFrameBuilder *)moveHorizontallyOffset:(CGFloat)offset;
 {
-    [self moveToOrigin:view.frame.origin];
+    self.x += offset;
     return self;
 }
 
-- (YPFrameBuilder *)moveWithOffsetX:(CGFloat)offsetX
+- (YPFrameBuilder *)moveVerticallyOffset:(CGFloat)offset;
 {
-    [self moveToX:self.x + offsetX];
-    return self;
-}
-
-- (YPFrameBuilder *)moveWithOffsetY:(CGFloat)offsetY
-{
-    [self moveToY:self.y + offsetY];
-    return self;
-}
-
-- (YPFrameBuilder *)moveWithOffsetX:(CGFloat)offsetX offsetY:(CGFloat)offsetY
-{
-    [self moveToOriginWithX:self.x + offsetX y:self.y + offsetY];
+    self.y += offset;
     return self;
 }
 
 #pragma mark - Resize
+
 - (YPFrameBuilder *)setWidth:(CGFloat)width
 {
-    self.w = width;
-    return self;
+    return [self setSize:CGSizeMake(width, self.h)];
 }
 
 - (YPFrameBuilder *)setHeight:(CGFloat)height
 {
-    self.h = height;
-    return self;
+    return [self setSize:CGSizeMake(self.w, height)];
 }
 
 - (YPFrameBuilder *)setSize:(CGSize)size
 {
-    [self setSizeWithWidth:size.width height:size.height];
-    return self;
-}
-
-- (YPFrameBuilder *)setFrame:(CGRect)frame
-{
-    [self moveToOrigin:frame.origin];
-    [self setSize:frame.size];
-    return self;
-}
-
-- (YPFrameBuilder *)setSizeWithWidth:(CGFloat)width height:(CGFloat)height
-{
-    [self setW:width];
-    [self setH:height];
+    self.w = size.width;
+    self.h = size.height;
     return self;
 }
 
@@ -142,141 +143,137 @@
     return self;
 }
 
-- (YPFrameBuilder *)setFrameEqualToView:(UIView *)view
-{
-    [self setFrame:view.frame];
-    return self;
-}
-
 #pragma mark - Alignment In Superview
-- (YPFrameBuilder *)alignToCenterInSuperview:(UIView *)superview
+- (YPFrameBuilder *)alignToCenterInSuperview
 {
-    [[self alignToCenterVerticallyInSuperview:superview] alignToCenterHorizontallyInSuperview:superview];
+    return [[self alignToCenterVerticallyInSuperview] alignToCenterHorizontallyInSuperview];
+}
+
+- (YPFrameBuilder *)alignToCenterHorizontallyInSuperview
+{
+    return [self alignInSuperviewOnOrientation:YPFrameBuilderAlignOrientationCenterHorizontally];
+}
+
+- (YPFrameBuilder *)alignToCenterVerticallyInSuperview
+{
+    return [self alignInSuperviewOnOrientation:YPFrameBuilderAlignOrientationCenterVertically];
+}
+
+- (YPFrameBuilder *)alignToTopInSuperview
+{
+    return [self alignInSuperviewOnOrientation:YPFrameBuilderAlignOrientationTop];
+}
+
+- (YPFrameBuilder *)alignToBottomInSuperview
+{
+    return [self alignInSuperviewOnOrientation:YPFrameBuilderAlignOrientationBottom];
+}
+
+- (YPFrameBuilder *)alignToLeftInSuperview
+{
+    return [self alignInSuperviewOnOrientation:YPFrameBuilderAlignOrientationLeft];
+}
+
+- (YPFrameBuilder *)alignRightInSuperview
+{
+    return [self alignInSuperviewOnOrientation:YPFrameBuilderAlignOrientationRight];
+}
+
+- (YPFrameBuilder *)alignInSuperviewOnOrientation:(int)orientation
+{
+    UIView *superView = self.view.superview;
+    NSAssert(!superView, @"please add subview first.");
+    if (superView) {
+        switch (orientation) {
+            case YPFrameBuilderAlignOrientationLeft: //left
+                [self setLeft:0]; 
+                break;
+            case YPFrameBuilderAlignOrientationTop: //top
+                [self setTop:0];
+                break;
+            case YPFrameBuilderAlignOrientationRight: //right
+                [self setLeft:superView.bounds.size.width - self.w];
+                break;
+            case YPFrameBuilderAlignOrientationBottom: //bottom
+                [self setTop:superView.bounds.size.height - self.h];
+                break;
+            case YPFrameBuilderAlignOrientationCenterHorizontally:
+                [self setLeft:(CGRectGetWidth(superView.bounds) - self.w) / 2];
+                break;
+            case YPFrameBuilderAlignOrientationCenterVertically:
+                [self setTop:(CGRectGetHeight(superView.bounds) - self.h) / 2];
+                break;
+            default:
+                break;
+        }
+    }
     return self;
 }
 
-- (YPFrameBuilder *)alignToCenterHorizontallyInSuperview:(UIView *)superview
-{
-    [self moveToX:(CGRectGetWidth(superview.bounds) - self.w) / 2];
-    return self;
-}
-
-- (YPFrameBuilder *)alignToCenterVerticallyInSuperview:(UIView *)superview
-{
-    [self moveToY:(CGRectGetHeight(superview.bounds) - self.h) / 2];
-    return self;
-}
-
-- (YPFrameBuilder *)alignToTopInSuperview:(UIView *)superview
-{
-    [self alignToTopInSuperview:superview offset:0.0];
-    return self;
-}
-
-- (YPFrameBuilder *)alignToBottomInSuperview:(UIView *)superview
-{
-    [self alignToBottomInSuperview:superview offset:0.0f];
-    return self;
-}
-
-- (YPFrameBuilder *)alignToLeftInSuperview:(UIView *)superview
-{
-    [self alignToLeftInSuperview:superview offset:0.0f];
-    return self;
-}
-
-- (YPFrameBuilder *)alignRightInSuperview:(UIView *)superview
-{
-    [self alignToRightInSuperview:superview offset:0.0f];
-    return self;
-}
-
+//fill
 - (YPFrameBuilder *)fillInSuperview:(UIView *)superview
 {
-    [self fillInSuperview:superview insets:UIEdgeInsetsZero];
-    return self;
-}
-
-- (YPFrameBuilder *)alignToTopInSuperview:(UIView *)superview offset:(CGFloat)offset
-{
-    [self moveToY:offset];
-    return self;
-}
-
-- (YPFrameBuilder *)alignToBottomInSuperview:(UIView *)superview offset:(CGFloat)offset
-{
-    [self moveToY:CGRectGetHeight(superview.bounds) - self.h + offset];
-    return self;
-}
-
-- (YPFrameBuilder *)alignToLeftInSuperview:(UIView *)superview offset:(CGFloat)offset
-{
-    [self moveToX:offset];
-    return self;
-}
-
-- (YPFrameBuilder *)alignToRightInSuperview:(UIView *)superview offset:(CGFloat)offset
-{
-    [self moveToX:CGRectGetWidth(superview.bounds) - self.w + offset];
-    return self;
-}
-
-- (YPFrameBuilder *)fillInSuperview:(UIView *)superview insets:(UIEdgeInsets)insets
-{
-    [self resetFrame:CGRectMake(insets.left,
-                                insets.top,
-                                CGRectGetWidth(superview.bounds) - insets.left - insets.right,
-                                CGRectGetHeight(superview.bounds) - insets.top - insets.bottom)];
-    return self;
+    return [[self setOrigin:superview.bounds.origin] setSize:superview.bounds.size];
 }
 
 #pragma mark - Alignment To View
+
 - (YPFrameBuilder *)alignToTopOfView:(UIView *)view
 {
-    [self alignToTopOfView:view offset:0.0f];
-    return self;
+    return [self setTop:view.top];
 }
 
 - (YPFrameBuilder *)alignToBottomOfView:(UIView *)view
 {
-    [self alignToBottomOfView:view offset:0.0f];
-    return self;
+    return [self setBottom:view.bottom];
 }
 
 - (YPFrameBuilder *)alignToLeftOfView:(UIView *)view
 {
-    [self alignToLeftOfView:view offset:0.0f];
-    return self;
+    return [self setLeft:view.left];
 }
 
 - (YPFrameBuilder *)alignToRightOfView:(UIView *)view
 {
-    [self alignToRightOfView:view offset:0.0f];
+    return [self setRight:view.right];
+}
+
+#pragma mark - near
+- (YPFrameBuilder *)nearToTopOfView:(UIView *)view
+{
     return self;
 }
 
-- (YPFrameBuilder *)alignToTopOfView:(UIView *)view offset:(CGFloat)offset
+- (YPFrameBuilder *)nearToBottomOfView:(UIView *)view
 {
-    self.y = CGRectGetMinY(view.frame) + offset;
     return self;
 }
 
-- (YPFrameBuilder *)alignToBottomOfView:(UIView *)view offset:(CGFloat)offset
+- (YPFrameBuilder *)nearToLeftOfView:(UIView *)view
 {
-    self.y = CGRectGetMaxY(view.frame) - offset;
     return self;
 }
 
-- (YPFrameBuilder *)alignToLeftOfView:(UIView *)view offset:(CGFloat)offset
+- (YPFrameBuilder *)nearToRightOfView:(UIView *)view
 {
-    self.x = CGRectGetMinX(view.frame) + offset;
     return self;
 }
 
-- (YPFrameBuilder *)alignToRightOfView:(UIView *)view offset:(CGFloat)offset
-{
-    self.x = CGRectGetMaxX(view.frame) - offset;
-    return self;
+#pragma mark - properties
+#define DefineBlockProperty(BlockType,BlockArgType,propertyName)     \
+- (BlockType)propertyName                                            \
+{                                                                   \
+    BlockType block = ^(BlockArgType arg) {                         \
+        return [self propertyName:arg];                              \
+    };                                                              \
+    return block;                                                   \
 }
+#define DefineCGFloatBlockProperty(propertyName) DefineBlockProperty(Block_CGFloatArg,CGFloat,propertyName)
+#define DefineUIViewBlockProperty(propertyName) DefineBlockProperty(Block_UIViewArg,UIView*,propertyName)
+
+DefineCGFloatBlockProperty(setLeft)
+DefineCGFloatBlockProperty(setTop)
+DefineCGFloatBlockProperty(setRight)
+DefineCGFloatBlockProperty(setBottom)
 
 @end
