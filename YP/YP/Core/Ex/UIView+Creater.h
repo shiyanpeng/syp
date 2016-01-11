@@ -43,3 +43,10 @@
                            target:(id)target;
 
 @end
+
+@interface UIImageView (Creater)
+
++ (instancetype)createInSuperView:(UIView *)superView imageName:(NSString *)imageName;
++ (instancetype)createInSuperView:(UIView *)superView image:(UIImage *)image;
+
+@end

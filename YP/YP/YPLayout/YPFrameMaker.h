@@ -22,7 +22,8 @@ readonlyProperty YPViewAtrributeRelation *height;
 readonlyProperty YPViewAtrributeRelation *centerX;
 readonlyProperty YPViewAtrributeRelation *centerY;
 
-readonlyProperty YPViewAtrributeRelation *fillSuperView;
+- (void)fillToSuperView;
+- (void)fillToSuperViewWithEdgeInsets:(UIEdgeInsets)edgeInsets;
 
 - (instancetype)initWithTargetView:(UIView *)view;
 - (void)applyToView;

@@ -216,12 +216,16 @@ DefineEdgesRelationProperty(height, YPLayoutAttributeHeight);
 DefineEdgesRelationProperty(centerX, YPLayoutAttributeCenterX);
 DefineEdgesRelationProperty(centerY, YPLayoutAttributeCenterY);
 
-- (YPViewAtrributeRelation *)fillSuperView
+- (void)fillToSuperView
 {
-    self.left.equalToSuperviewLeft.offset(0);
-    self.right.equalToSuperviewRight.offset(0);
-    self.top.equalToSuperviewTop.offset(0);
-    return self.bottom.equalToSuperviewBottom.offset(0);
+    [self fillToSuperViewWithEdgeInsets:UIEdgeInsetsZero];
+}
+- (void)fillToSuperViewWithEdgeInsets:(UIEdgeInsets)edgeInsets
+{
+    self.left.equalToSuperviewLeft.offset(edgeInsets.left);
+    self.right.equalToSuperviewRight.offset(-edgeInsets.right);
+    self.top.equalToSuperviewTop.offset(edgeInsets.top);
+    self.bottom.equalToSuperviewBottom.offset(-edgeInsets.bottom);
 }
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YPAnimationDemoBaseViewController.h"
 
-@interface Listing8_8ViewController : UIViewController
+
+@interface Listing8_8ViewController : YPAnimationDemoBaseViewController
 
 @end

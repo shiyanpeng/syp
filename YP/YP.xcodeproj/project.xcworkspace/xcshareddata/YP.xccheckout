@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5E8BDE19-B4F8-401D-8801-DFB9CC513A39</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>63EFCDC737B2C11844787CC9D1CACAA08939E3FC</key>
+		<string>https://github.com/shiyanpeng/syp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>YP/YP.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>63EFCDC737B2C11844787CC9D1CACAA08939E3FC</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/shiyanpeng/syp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>63EFCDC737B2C11844787CC9D1CACAA08939E3FC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>63EFCDC737B2C11844787CC9D1CACAA08939E3FC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>syp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

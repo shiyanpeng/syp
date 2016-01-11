@@ -12,7 +12,9 @@
 
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UIButton *startButton;
+@property (nonatomic, strong) UIButton *endButton;
 
 - (void)startAnimation;
+- (void)endAnimation;
 
 @end

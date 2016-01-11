@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D3B171B1BF72AE600161A15 /* YPTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B171A1BF72AE600161A15 /* YPTreeNode.m */; };
 		2D3B171D1BF7315000161A15 /* view.xui in Resources */ = {isa = PBXBuildFile; fileRef = 2D3B171C1BF7315000161A15 /* view.xui */; };
+		2D49B9231C293020006305A9 /* YPFigure3_3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D49B9221C293020006305A9 /* YPFigure3_3ViewController.m */; };
 		2D655B9C1BC8E33500580E34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D655B9B1BC8E33500580E34 /* main.m */; };
 		2D655B9F1BC8E33500580E34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D655B9E1BC8E33500580E34 /* AppDelegate.m */; };
 		2D655BA71BC8E33500580E34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D655BA61BC8E33500580E34 /* Images.xcassets */; };
@@ -18,17 +18,26 @@
 		2D884E7B1BE30D27005C1569 /* YPViewAtrributeRelation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D884E7A1BE30D27005C1569 /* YPViewAtrributeRelation.m */; };
 		2D884E7E1BE33999005C1569 /* YPFrameMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D884E7D1BE33999005C1569 /* YPFrameMaker.m */; };
 		2D884E811BE37734005C1569 /* UIView+YPFrameMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D884E801BE37734005C1569 /* UIView+YPFrameMaker.m */; };
+		2DA11A4F1C2168D2000BB485 /* List8_11ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA11A4E1C2168D2000BB485 /* List8_11ViewController.m */; };
+		2DA11A5B1C216946000BB485 /* 玫瑰@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA11A501C216946000BB485 /* 玫瑰@2x.png */; };
+		2DA11A5C1C216946000BB485 /* 启动页1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA11A511C216946000BB485 /* 启动页1@2x.png */; };
+		2DA11A5D1C216946000BB485 /* 启动页2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA11A521C216946000BB485 /* 启动页2@2x.png */; };
+		2DA11A5E1C216946000BB485 /* 启动页3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA11A531C216946000BB485 /* 启动页3@2x.png */; };
+		2DA11A5F1C216946000BB485 /* 启动页4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA11A541C216946000BB485 /* 启动页4@2x.png */; };
+		2DA11A601C216946000BB485 /* Listing8_8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA11A561C216946000BB485 /* Listing8_8ViewController.m */; };
+		2DA11A611C216946000BB485 /* YPAnimationDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA11A581C216946000BB485 /* YPAnimationDemoBaseViewController.m */; };
+		2DA11A621C216946000BB485 /* YPAnimationDemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA11A5A1C216946000BB485 /* YPAnimationDemoListViewController.m */; };
+		2DA11A681C216980000BB485 /* YPTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA11A651C216980000BB485 /* YPTreeNode.m */; };
+		2DA11A691C216980000BB485 /* YPXmlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA11A671C216980000BB485 /* YPXmlView.m */; };
+		2DA11A6F1C23B334000BB485 /* Listing10_6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA11A6E1C23B334000BB485 /* Listing10_6ViewController.m */; };
+		2DA11A731C23B8EC000BB485 /* 真心话红点@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DA11A721C23B8EC000BB485 /* 真心话红点@3x.png */; };
 		2DB203A51BE065A50078D46B /* YPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2039E1BE065A50078D46B /* YPModel.m */; };
 		2DB203A61BE065A50078D46B /* YPView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB203A01BE065A50078D46B /* YPView.m */; };
 		2DB203A71BE065A50078D46B /* YPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB203A21BE065A50078D46B /* YPViewController.m */; };
 		2DB203A81BE065A50078D46B /* YPViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB203A41BE065A50078D46B /* YPViewModel.m */; };
 		2DB203C31BE0C75C0078D46B /* UIView+Creater.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB203C21BE0C75C0078D46B /* UIView+Creater.m */; };
 		2DB203CD1BE0D6720078D46B /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB203CC1BE0D6720078D46B /* UIColor+Utility.m */; };
-		2DD721691C20033300F8C360 /* YPAnimationDemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD721681C20033300F8C360 /* YPAnimationDemoListViewController.m */; };
 		2DD7216C1C2003E000F8C360 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7216B1C2003E000F8C360 /* ViewController.m */; };
-		2DD7216F1C20066400F8C360 /* Listing8_8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7216E1C20066300F8C360 /* Listing8_8ViewController.m */; };
-		2DD721721C20071300F8C360 /* YPAnimationDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD721711C20071300F8C360 /* YPAnimationDemoBaseViewController.m */; };
-		2DDE1C741BF89926005CA7DD /* YPXmlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDE1C731BF89926005CA7DD /* YPXmlView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D3B17191BF72AE600161A15 /* YPTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPTreeNode.h; sourceTree = "<group>"; };
-		2D3B171A1BF72AE600161A15 /* YPTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPTreeNode.m; sourceTree = "<group>"; };
 		2D3B171C1BF7315000161A15 /* view.xui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = view.xui; sourceTree = "<group>"; };
+		2D49B9211C293020006305A9 /* YPFigure3_3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPFigure3_3ViewController.h; sourceTree = "<group>"; };
+		2D49B9221C293020006305A9 /* YPFigure3_3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPFigure3_3ViewController.m; sourceTree = "<group>"; };
 		2D655B961BC8E33400580E34 /* YP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D655B9A1BC8E33400580E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D655B9B1BC8E33500580E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +72,27 @@
 		2D884E7D1BE33999005C1569 /* YPFrameMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YPFrameMaker.m; path = YP/YPLayout/YPFrameMaker.m; sourceTree = SOURCE_ROOT; };
 		2D884E7F1BE37734005C1569 /* UIView+YPFrameMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+YPFrameMaker.h"; path = "YP/YPLayout/UIView+YPFrameMaker.h"; sourceTree = SOURCE_ROOT; };
 		2D884E801BE37734005C1569 /* UIView+YPFrameMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+YPFrameMaker.m"; path = "YP/YPLayout/UIView+YPFrameMaker.m"; sourceTree = SOURCE_ROOT; };
+		2DA11A4D1C2168D2000BB485 /* List8_11ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = List8_11ViewController.h; path = AnimationDemo/List8_11ViewController.h; sourceTree = "<group>"; };
+		2DA11A4E1C2168D2000BB485 /* List8_11ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = List8_11ViewController.m; path = AnimationDemo/List8_11ViewController.m; sourceTree = "<group>"; };
+		2DA11A501C216946000BB485 /* 玫瑰@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "玫瑰@2x.png"; path = "AnimationDemo/玫瑰@2x.png"; sourceTree = "<group>"; };
+		2DA11A511C216946000BB485 /* 启动页1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "启动页1@2x.png"; path = "AnimationDemo/启动页1@2x.png"; sourceTree = "<group>"; };
+		2DA11A521C216946000BB485 /* 启动页2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "启动页2@2x.png"; path = "AnimationDemo/启动页2@2x.png"; sourceTree = "<group>"; };
+		2DA11A531C216946000BB485 /* 启动页3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "启动页3@2x.png"; path = "AnimationDemo/启动页3@2x.png"; sourceTree = "<group>"; };
+		2DA11A541C216946000BB485 /* 启动页4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "启动页4@2x.png"; path = "AnimationDemo/启动页4@2x.png"; sourceTree = "<group>"; };
+		2DA11A551C216946000BB485 /* Listing8_8ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Listing8_8ViewController.h; path = AnimationDemo/Listing8_8ViewController.h; sourceTree = "<group>"; };
+		2DA11A561C216946000BB485 /* Listing8_8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Listing8_8ViewController.m; path = AnimationDemo/Listing8_8ViewController.m; sourceTree = "<group>"; };
+		2DA11A571C216946000BB485 /* YPAnimationDemoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YPAnimationDemoBaseViewController.h; path = AnimationDemo/YPAnimationDemoBaseViewController.h; sourceTree = "<group>"; };
+		2DA11A581C216946000BB485 /* YPAnimationDemoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YPAnimationDemoBaseViewController.m; path = AnimationDemo/YPAnimationDemoBaseViewController.m; sourceTree = "<group>"; };
+		2DA11A591C216946000BB485 /* YPAnimationDemoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YPAnimationDemoListViewController.h; path = AnimationDemo/YPAnimationDemoListViewController.h; sourceTree = "<group>"; };
+		2DA11A5A1C216946000BB485 /* YPAnimationDemoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YPAnimationDemoListViewController.m; path = AnimationDemo/YPAnimationDemoListViewController.m; sourceTree = "<group>"; };
+		2DA11A631C216965000BB485 /* YPCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YPCore.h; path = Core/YPCore.h; sourceTree = "<group>"; };
+		2DA11A641C216980000BB485 /* YPTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YPTreeNode.h; path = XUI/YPTreeNode.h; sourceTree = "<group>"; };
+		2DA11A651C216980000BB485 /* YPTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YPTreeNode.m; path = XUI/YPTreeNode.m; sourceTree = "<group>"; };
+		2DA11A661C216980000BB485 /* YPXmlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YPXmlView.h; path = XUI/YPXmlView.h; sourceTree = "<group>"; };
+		2DA11A671C216980000BB485 /* YPXmlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YPXmlView.m; path = XUI/YPXmlView.m; sourceTree = "<group>"; };
+		2DA11A6D1C23B334000BB485 /* Listing10_6ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Listing10_6ViewController.h; path = AnimationDemo/Listing10_6ViewController.h; sourceTree = "<group>"; };
+		2DA11A6E1C23B334000BB485 /* Listing10_6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Listing10_6ViewController.m; path = AnimationDemo/Listing10_6ViewController.m; sourceTree = "<group>"; };
+		2DA11A721C23B8EC000BB485 /* 真心话红点@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "真心话红点@3x.png"; sourceTree = "<group>"; };
 		2DB2039D1BE065A50078D46B /* YPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YPModel.h; path = MVVMVC/YPModel.h; sourceTree = "<group>"; };
 		2DB2039E1BE065A50078D46B /* YPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YPModel.m; path = MVVMVC/YPModel.m; sourceTree = "<group>"; };
 		2DB2039F1BE065A50078D46B /* YPView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YPView.h; path = MVVMVC/YPView.h; sourceTree = "<group>"; };
@@ -72,21 +102,12 @@
 		2DB203A31BE065A50078D46B /* YPViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YPViewModel.h; path = MVVMVC/YPViewModel.h; sourceTree = "<group>"; };
 		2DB203A41BE065A50078D46B /* YPViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YPViewModel.m; path = MVVMVC/YPViewModel.m; sourceTree = "<group>"; };
 		2DB203B11BE068FD0078D46B /* YPPropertyMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YPPropertyMacro.h; path = Core/YPPropertyMacro.h; sourceTree = "<group>"; };
-		2DB203B41BE08C680078D46B /* YPCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPCore.h; sourceTree = "<group>"; };
 		2DB203C11BE0C75C0078D46B /* UIView+Creater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Creater.h"; path = "Core/Ex/UIView+Creater.h"; sourceTree = "<group>"; };
 		2DB203C21BE0C75C0078D46B /* UIView+Creater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Creater.m"; path = "Core/Ex/UIView+Creater.m"; sourceTree = "<group>"; };
 		2DB203CB1BE0D6720078D46B /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Utility.h"; path = "Core/Ex/UIColor+Utility.h"; sourceTree = "<group>"; };
 		2DB203CC1BE0D6720078D46B /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Utility.m"; path = "Core/Ex/UIColor+Utility.m"; sourceTree = "<group>"; };
-		2DD721671C20033300F8C360 /* YPAnimationDemoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPAnimationDemoListViewController.h; sourceTree = "<group>"; };
-		2DD721681C20033300F8C360 /* YPAnimationDemoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPAnimationDemoListViewController.m; sourceTree = "<group>"; };
 		2DD7216A1C2003E000F8C360 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2DD7216B1C2003E000F8C360 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2DD7216D1C20066300F8C360 /* Listing8_8ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listing8_8ViewController.h; sourceTree = "<group>"; };
-		2DD7216E1C20066300F8C360 /* Listing8_8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Listing8_8ViewController.m; sourceTree = "<group>"; };
-		2DD721701C20071300F8C360 /* YPAnimationDemoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPAnimationDemoBaseViewController.h; sourceTree = "<group>"; };
-		2DD721711C20071300F8C360 /* YPAnimationDemoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPAnimationDemoBaseViewController.m; sourceTree = "<group>"; };
-		2DDE1C721BF89926005CA7DD /* YPXmlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPXmlView.h; sourceTree = "<group>"; };
-		2DDE1C731BF89926005CA7DD /* YPXmlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPXmlView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +149,8 @@
 		2D655B981BC8E33400580E34 /* YP */ = {
 			isa = PBXGroup;
 			children = (
-				2DD721661C2001D400F8C360 /* AnimationDemo */,
 				2DB203B01BE068980078D46B /* Core */,
+				2DD721661C2001D400F8C360 /* AnimationDemo */,
 				2DB2039C1BE064910078D46B /* XUI */,
 				2D847BD31BCA5432007DE8AD /* MVVMVC */,
 				2D847BE01BCAACA9007DE8AD /* ViewLayout */,
@@ -206,10 +227,10 @@
 		2DB2039C1BE064910078D46B /* XUI */ = {
 			isa = PBXGroup;
 			children = (
-				2D3B17191BF72AE600161A15 /* YPTreeNode.h */,
-				2D3B171A1BF72AE600161A15 /* YPTreeNode.m */,
-				2DDE1C721BF89926005CA7DD /* YPXmlView.h */,
-				2DDE1C731BF89926005CA7DD /* YPXmlView.m */,
+				2DA11A641C216980000BB485 /* YPTreeNode.h */,
+				2DA11A651C216980000BB485 /* YPTreeNode.m */,
+				2DA11A661C216980000BB485 /* YPXmlView.h */,
+				2DA11A671C216980000BB485 /* YPXmlView.m */,
 			);
 			name = XUI;
 			sourceTree = "<group>";
@@ -225,8 +246,8 @@
 		2DB203B01BE068980078D46B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2DA11A631C216965000BB485 /* YPCore.h */,
 				2DB203BD1BE0AF7B0078D46B /* Ex */,
-				2DB203B41BE08C680078D46B /* YPCore.h */,
 				2DB203B11BE068FD0078D46B /* YPPropertyMacro.h */,
 			);
 			name = Core;
@@ -246,12 +267,24 @@
 		2DD721661C2001D400F8C360 /* AnimationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2DD721671C20033300F8C360 /* YPAnimationDemoListViewController.h */,
-				2DD721681C20033300F8C360 /* YPAnimationDemoListViewController.m */,
-				2DD721701C20071300F8C360 /* YPAnimationDemoBaseViewController.h */,
-				2DD721711C20071300F8C360 /* YPAnimationDemoBaseViewController.m */,
-				2DD7216D1C20066300F8C360 /* Listing8_8ViewController.h */,
-				2DD7216E1C20066300F8C360 /* Listing8_8ViewController.m */,
+				2DA11A721C23B8EC000BB485 /* 真心话红点@3x.png */,
+				2DA11A501C216946000BB485 /* 玫瑰@2x.png */,
+				2DA11A511C216946000BB485 /* 启动页1@2x.png */,
+				2DA11A521C216946000BB485 /* 启动页2@2x.png */,
+				2DA11A531C216946000BB485 /* 启动页3@2x.png */,
+				2DA11A541C216946000BB485 /* 启动页4@2x.png */,
+				2DA11A571C216946000BB485 /* YPAnimationDemoBaseViewController.h */,
+				2DA11A581C216946000BB485 /* YPAnimationDemoBaseViewController.m */,
+				2DA11A591C216946000BB485 /* YPAnimationDemoListViewController.h */,
+				2DA11A5A1C216946000BB485 /* YPAnimationDemoListViewController.m */,
+				2D49B9211C293020006305A9 /* YPFigure3_3ViewController.h */,
+				2D49B9221C293020006305A9 /* YPFigure3_3ViewController.m */,
+				2DA11A551C216946000BB485 /* Listing8_8ViewController.h */,
+				2DA11A561C216946000BB485 /* Listing8_8ViewController.m */,
+				2DA11A4D1C2168D2000BB485 /* List8_11ViewController.h */,
+				2DA11A4E1C2168D2000BB485 /* List8_11ViewController.m */,
+				2DA11A6D1C23B334000BB485 /* Listing10_6ViewController.h */,
+				2DA11A6E1C23B334000BB485 /* Listing10_6ViewController.m */,
 			);
 			name = AnimationDemo;
 			sourceTree = "<group>";
@@ -336,9 +369,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA11A731C23B8EC000BB485 /* 真心话红点@3x.png in Resources */,
+				2DA11A5F1C216946000BB485 /* 启动页4@2x.png in Resources */,
 				2D655BAA1BC8E33500580E34 /* LaunchScreen.xib in Resources */,
 				2D655BA71BC8E33500580E34 /* Images.xcassets in Resources */,
+				2DA11A5B1C216946000BB485 /* 玫瑰@2x.png in Resources */,
 				2D3B171D1BF7315000161A15 /* view.xui in Resources */,
+				2DA11A5E1C216946000BB485 /* 启动页3@2x.png in Resources */,
+				2DA11A5D1C216946000BB485 /* 启动页2@2x.png in Resources */,
+				2DA11A5C1C216946000BB485 /* 启动页1@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,23 +395,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D3B171B1BF72AE600161A15 /* YPTreeNode.m in Sources */,
+				2DA11A681C216980000BB485 /* YPTreeNode.m in Sources */,
 				2D884E7E1BE33999005C1569 /* YPFrameMaker.m in Sources */,
-				2DDE1C741BF89926005CA7DD /* YPXmlView.m in Sources */,
 				2DB203C31BE0C75C0078D46B /* UIView+Creater.m in Sources */,
 				2DB203CD1BE0D6720078D46B /* UIColor+Utility.m in Sources */,
+				2DA11A621C216946000BB485 /* YPAnimationDemoListViewController.m in Sources */,
 				2DB203A61BE065A50078D46B /* YPView.m in Sources */,
 				2DB203A51BE065A50078D46B /* YPModel.m in Sources */,
 				2D884E811BE37734005C1569 /* UIView+YPFrameMaker.m in Sources */,
 				2DB203A71BE065A50078D46B /* YPViewController.m in Sources */,
-				2DD721691C20033300F8C360 /* YPAnimationDemoListViewController.m in Sources */,
+				2DA11A6F1C23B334000BB485 /* Listing10_6ViewController.m in Sources */,
 				2DD7216C1C2003E000F8C360 /* ViewController.m in Sources */,
 				2DB203A81BE065A50078D46B /* YPViewModel.m in Sources */,
-				2DD7216F1C20066400F8C360 /* Listing8_8ViewController.m in Sources */,
 				2D884E7B1BE30D27005C1569 /* YPViewAtrributeRelation.m in Sources */,
+				2D49B9231C293020006305A9 /* YPFigure3_3ViewController.m in Sources */,
 				2D884E781BE307C0005C1569 /* YPViewAttribute.m in Sources */,
+				2DA11A4F1C2168D2000BB485 /* List8_11ViewController.m in Sources */,
 				2D655B9F1BC8E33500580E34 /* AppDelegate.m in Sources */,
-				2DD721721C20071300F8C360 /* YPAnimationDemoBaseViewController.m in Sources */,
+				2DA11A601C216946000BB485 /* Listing8_8ViewController.m in Sources */,
+				2DA11A691C216980000BB485 /* YPXmlView.m in Sources */,
+				2DA11A611C216946000BB485 /* YPAnimationDemoBaseViewController.m in Sources */,
 				2D655B9C1BC8E33500580E34 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

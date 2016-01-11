@@ -67,7 +67,7 @@
 
 @end
 
-@implementation UIButton
+@implementation UIButton (Creater)
 
 + (instancetype)createInSuperView:(UIView *)superView normalImage:(UIImage *)normalImage normalTitle:(NSString *)normalTitle normalTitleColor:(NSUInteger)normalTitleColor touchUpInsideSelector:(SEL)selector target:(id)target
 {
@@ -79,6 +79,24 @@
     [button addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
     [superView addSubview:button];
     return button;
+}
+
+@end
+
+@implementation UIImageView (Creater)
+
++ (instancetype)createInSuperView:(UIView *)superView imageName:(NSString *)imageName
+{
+    UIImage *image = imageName.length == 0 ? nil : [UIImage imageNamed:imageName];
+    return [[self class] createInSuperView:superView image:image];
+}
+
++ (instancetype)createInSuperView:(UIView *)superView image:(UIImage *)image
+{
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.image = image;
+    [superView addSubview:imageView];
+    return imageView;
 }
 
 @end
