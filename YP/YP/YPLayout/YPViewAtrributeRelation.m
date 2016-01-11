@@ -80,16 +80,29 @@
     };
 }
 
-#define YPViewAttributeRelation_EqualToSuperviewAttribute(attribute)                                \
-- (YPViewAtrributeRelation *)equalToSuperview##attribute                                            \
-{                                                                                                   \
-    UIView *superview = self.targeViewAttribute.view.superview;                                     \
-    self.relateViewAttribute = [[YPViewAttribute alloc] initWithView:superview                      \
-                                                     layoutAttribute:YPLayoutAttribute##attribute   \
-                                                         isSuperview:YES];                          \
-    return self;                                                                                    \
-}                                                                                                   \
+//#define YPViewAttributeRelation_EqualToSuperviewAttribute(attribute)                                \
+//- (YPViewAtrributeRelation *)equalToSuperview##attribute                                            \
+//{                                                                                                   \
+//    UIView *superview = self.targeViewAttribute.view.superview;                                     \
+//    self.relateViewAttribute = [[YPViewAttribute alloc] initWithView:superview                      \
+//                                                     layoutAttribute:YPLayoutAttribute##attribute   \
+//                                                         isSuperview:YES];                          \
+//    return self;                                                                                    \
+//}                                                                                                   \
 
+
+
+#define YPViewAttributeRelation_EqualToSuperviewAttribute(attribute)                                    \
+- (YPViewAtrributeRelation * (^)(void))equalToSuperview##attribute                                      \
+{                                                                                                       \
+    return ^YPViewAtrributeRelation *(void) {                                                           \
+        UIView *superview = self.targeViewAttribute.view.superview;                                     \
+        self.relateViewAttribute = [[YPViewAttribute alloc] initWithView:superview                      \
+                                                         layoutAttribute:YPLayoutAttribute##attribute   \
+                                                             isSuperview:YES];                          \
+        return self;                                                                                    \
+    };                                                                                                  \
+}                                                                                                       \
 
 YPViewAttributeRelation_EqualToSuperviewAttribute(Left)
 YPViewAttributeRelation_EqualToSuperviewAttribute(Right)

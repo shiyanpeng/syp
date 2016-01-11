@@ -91,32 +91,32 @@ strongProperty UIView *targetView;
     
     switch (firstLayoutAttribute | sencondLayoutAttribute) {
         case YPLayoutAttributeLeft | YPLayoutAttributeRight:
-            [self swapX:&firstValue andY:&secondValue ifNotEqualToAttribute:YPLayoutAttributeLeft];
+            [self swapX:&firstValue andY:&secondValue ifFirstLayoutAttribute:firstLayoutAttribute NotEqualToAttribute:YPLayoutAttributeLeft];
             *start = firstValue;
             *span = secondValue - firstValue;
             break;
         case YPLayoutAttributeLeft | YPLayoutAttributeWidth:
-            [self swapX:&firstValue andY:&secondValue ifNotEqualToAttribute:YPLayoutAttributeLeft];
+            [self swapX:&firstValue andY:&secondValue ifFirstLayoutAttribute:firstLayoutAttribute NotEqualToAttribute:YPLayoutAttributeLeft];
             *start = firstValue;
             *span = secondValue;
             break;
         case YPLayoutAttributeLeft | YPLayoutAttributeCenterX:
-            [self swapX:&firstValue andY:&secondValue ifNotEqualToAttribute:YPLayoutAttributeLeft];
+            [self swapX:&firstValue andY:&secondValue ifFirstLayoutAttribute:firstLayoutAttribute NotEqualToAttribute:YPLayoutAttributeLeft];
             *start = firstValue;
             *span = (secondValue - firstValue) * 2;
             break;
         case YPLayoutAttributeRight | YPLayoutAttributeWidth:
-            [self swapX:&firstValue andY:&secondValue ifNotEqualToAttribute:YPLayoutAttributeRight];
+            [self swapX:&firstValue andY:&secondValue ifFirstLayoutAttribute:firstLayoutAttribute NotEqualToAttribute:YPLayoutAttributeRight];
             *start = firstValue - secondValue;
             *span = secondValue;
             break;
         case YPLayoutAttributeRight | YPLayoutAttributeCenterX:
-            [self swapX:&firstValue andY:&secondValue ifNotEqualToAttribute:YPLayoutAttributeRight];
+            [self swapX:&firstValue andY:&secondValue ifFirstLayoutAttribute:firstLayoutAttribute NotEqualToAttribute:YPLayoutAttributeRight];
             *start = firstValue - (firstValue - secondValue) * 2;;
             *span = (firstValue - secondValue) * 2;
             break;
         case YPLayoutAttributeWidth | YPLayoutAttributeCenterX:
-            [self swapX:&firstValue andY:&secondValue ifNotEqualToAttribute:YPLayoutAttributeWidth];
+            [self swapX:&firstValue andY:&secondValue ifFirstLayoutAttribute:firstLayoutAttribute NotEqualToAttribute:YPLayoutAttributeWidth];
             *start = secondValue - firstValue / 2;
             *span = firstValue;
             break;
@@ -135,9 +135,9 @@ strongProperty UIView *targetView;
 #endif
 }
 
-- (void)swapX:(CGFloat *)x andY:(CGFloat *)y ifNotEqualToAttribute:(YPLayoutAttribute)attribute
+- (void)swapX:(CGFloat *)x andY:(CGFloat *)y ifFirstLayoutAttribute:(YPLayoutAttribute)firstLayoutAttribute NotEqualToAttribute:(YPLayoutAttribute)attribute
 {
-    if (abs((int)self.firstHorizontallyRelation.targeViewAttribute.layoutAttribute) != attribute) {
+    if (firstLayoutAttribute != attribute) {
         CGFloat temp;
         temp = *x;
         *x = *y;
@@ -222,10 +222,10 @@ DefineEdgesRelationProperty(centerY, YPLayoutAttributeCenterY);
 }
 - (void)fillToSuperViewWithEdgeInsets:(UIEdgeInsets)edgeInsets
 {
-    self.left.equalToSuperviewLeft.offset(edgeInsets.left);
-    self.right.equalToSuperviewRight.offset(-edgeInsets.right);
-    self.top.equalToSuperviewTop.offset(edgeInsets.top);
-    self.bottom.equalToSuperviewBottom.offset(-edgeInsets.bottom);
+    self.left.equalToSuperviewLeft().offset(edgeInsets.left);
+    self.right.equalToSuperviewRight().offset(-edgeInsets.right);
+    self.top.equalToSuperviewTop().offset(edgeInsets.top);
+    self.bottom.equalToSuperviewBottom().offset(-edgeInsets.bottom);
 }
 
 @end

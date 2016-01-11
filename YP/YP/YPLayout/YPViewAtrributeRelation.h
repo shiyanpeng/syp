@@ -23,16 +23,19 @@ assignProperty CGFloat constant;
 
 //链式语法支持 相对布局
 - (YPViewAtrributeRelation * (^)(YPViewAttribute *viewAttribute))equalTo;
-- (YPViewAtrributeRelation *)equalToSuperviewLeft;
-- (YPViewAtrributeRelation *)equalToSuperviewRight;
-- (YPViewAtrributeRelation *)equalToSuperviewTop;
-- (YPViewAtrributeRelation *)equalToSuperviewBottom;
-- (YPViewAtrributeRelation *)equalToSuperviewWidth;
-- (YPViewAtrributeRelation *)equalToSuperviewHeight;
-- (YPViewAtrributeRelation *)equalToSuperviewCenterX;
-- (YPViewAtrributeRelation *)equalToSuperviewCenterY;
+
+- (YPViewAtrributeRelation * (^)(void))equalToSuperviewLeft;
+- (YPViewAtrributeRelation * (^)(void))equalToSuperviewRight;
+- (YPViewAtrributeRelation * (^)(void))equalToSuperviewTop;
+- (YPViewAtrributeRelation * (^)(void))equalToSuperviewBottom;
+- (YPViewAtrributeRelation * (^)(void))equalToSuperviewWidth;
+- (YPViewAtrributeRelation * (^)(void))equalToSuperviewHeight;
+- (YPViewAtrributeRelation * (^)(void))equalToSuperviewCenterX;
+- (YPViewAtrributeRelation * (^)(void))equalToSuperviewCenterY;
+
 - (YPViewAtrributeRelation * (^)(CGFloat multiplier))multipliedBy;
 - (YPViewAtrributeRelation * (^)(CGFloat offset))offset;
+
 //绝对布局
 - (void(^)(CGFloat value))setValue;
 

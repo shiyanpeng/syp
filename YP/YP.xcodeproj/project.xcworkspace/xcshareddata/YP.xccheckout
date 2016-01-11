@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>5E8BDE19-B4F8-401D-8801-DFB9CC513A39</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>YP</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>63EFCDC737B2C11844787CC9D1CACAA08939E3FC</key>
 		<string>https://github.com/shiyanpeng/syp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>YP/YP.xcodeproj/project.xcworkspace</string>
+	<string>YP/YP.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>63EFCDC737B2C11844787CC9D1CACAA08939E3FC</key>
